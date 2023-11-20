@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+  <!-- Sticky Menu -->
+  <nav class="sticky-menu">
+      <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#bestseller">Best Seller</a></li>
+          <li><a href="#comment">Comment ?</a></li>
+          <li><a href="#qui">Qui ?</a></li>
+        <li><a href="#avis">Avis</a></li>
+        <li><a href="#commander">Commander</a></li>
+      </ul>
+  </nav>
+
+  <!-- section header -->
+  <header id="accueil">
+    <h1>Geek and Food</h1>
+    <p>Tagline : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt !</p>
+    <a href="#" class="cta-button">Cliquez ici</a> <!-- Bouton CTA -->
+  </header>
+
+  <!-- section produit best seller -->
+  <div id="bestseller" class="best-seller-section">
+    <div class="best-seller-content">
+      <h2>Produit best seller</h2>
+      <p>Présentation produit best seller : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt, ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="best-seller-photo">
+      <p>Photo best seller</p>
+    </div>
+  </div>
+
+  <!-- section comment ça marche -->
+  <div id="comment" class="section">
+    <h2>Comment ça marche ?</h2>
+    <p>Un court texte d'introduction</p>
+    <div class="photo-gallery">
+      <div class="photo">1<p>Explication étape 1</p></div>
+      <div class="photo">2<p>Explication étape 2</p></div>
+      <div class="photo">3<p>Explication étape 3</p></div>
+      <div class="photo">4<p>Explication étape 4</p></div>
+    </div>
+    <a href="#" class="cta-button">Cliquez ici</a> <!-- Bouton CTA -->
+  </div>
+
+  <!-- section qui sommes-nous -->
+  <div id="qui" class="qui-sommes-nous">
+    <h2>Qui sommes nous ?</h2>
+    <div class="logo-box">logo</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <img src="chemin_vers_image_illustration.jpg" alt="image d'llustration" class="illustration-image">
+  </div>
+
+  <!-- section avis clients -->
+  <div id="avis" class="avis-clients">
+      <h2>Avis clients</h2>
+      <p>Commentaires de nos clients satisfaits</p>
+
+      <div class="client-photos">
+        <div class="client-photo">
+            <p>Photo client 1</p>
+        </div>
+        <div class="client-photo">
+            <p>Photo client 2</p>
+        </div>
+        <div class="client-photo">
+            <p>Photo client 3</p>
+        </div>
+    </div>
+    <div class="client-photos">
+        <div class="client-stars">★★★★★</div>
+        <div class="client-stars">★★★★★</div>
+        <div class="client-stars">★★★★★</div>
+    </div>
+    <div class="client-photos">
+        <div class="client-name">Name</div>
+        <div class="client-name">Name</div>
+        <div class="client-name">Name</div>
+    </div>
+  </div>
+
+  <!-- section contact form -->
+  <div id="commander" class="contact-form-section">
+      <h2>Formulaire de contact commande</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+      <form id="contactForm" action="mailto:order@geekandfoodtest.com" method="post" enctype="text/plain">
+          <div class="form-group">
+              <label for="name">Nom :</label>
+              <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+              <label for="email">Email :</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+              <label for="phone">Numéro de téléphone :</label>
+              <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+              <label for="address">Adresse :</label>
+              <input type="text" id="address" name="address" required>
+          </div>
+          <div class="form-group">
+              <label for="people-count">Nombre de personnes :</label>
+              <select id="people-count" name="people-count">
+                  <option value="1">1 personne</option>
+                  <option value="2">2 personnes</option>
+                  <option value="3">3 personnes</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <button type="submit">Je commande</button>
+          </div>
+      </form>
+      <div id="confirmationMessage" class="confirmation-message" style="display: none;">
+          Merci, votre commande à bien été prise en compte, vous allez recevoir un email de confirmation.
+      </div>
+  </div>
+
+  <script>
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent the default form submission
+          document.getElementById('confirmationMessage').style.display = 'block'; // Show the confirmation message
+      });
+  </script>
+
+
+  <!-- section footer -->
+
+  <footer>
+      <div class="footer-content">
+          <div class="site-map">
+              <h3>Plan du site</h3>
+              <ul>
+                  <li><a href="#">Accueil</a></li>
+                  <li><a href="#">À propos</a></li>
+                  <li><a href="#">Produits</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+          <div class="social-media">
+              <h3>Suivez-nous</h3>
+              <a href="https://www.facebook.com" target="_blank">Facebook</a>
+              <a href="https://www.instagram.com" target="_blank">Instagram</a>
+              <a href="https://www.twitter.com" target="_blank">Twitter</a>
+              <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+          </div>
+      </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+</html>
